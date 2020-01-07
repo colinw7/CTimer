@@ -5,12 +5,7 @@
 // TODO: allow use of timer_create(), timer_settime(), timer_delete()
 
 CTimerMgr::
-CTimerMgr() :
- external_update_(false),
- signal_handler_ (false),
- itimer_active_  (false),
- itimer_msecs_   (0),
- timer_updating_ (false)
+CTimerMgr()
 {
 }
 
