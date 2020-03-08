@@ -85,11 +85,7 @@ updateTimers()
 
   TimerList timers = timers_;
 
-  TimerList::iterator ptimer1, ptimer2;
-
-  for (ptimer1 = timers.begin(), ptimer2 = timers.end(); ptimer1 != ptimer2; ++ptimer1) {
-    CTimer *timer = *ptimer1;
-
+  for (auto &timer : timers) {
     if (! timer->isActive())
       continue;
 
@@ -124,11 +120,7 @@ updateTimers()
 
   timer_updating_ = false;
 
-  TimerSet::iterator prtimer1, prtimer2;
-
-  for (prtimer1 = rtimers_.begin(), prtimer2 = rtimers_.end(); prtimer1 != prtimer2; ++prtimer1) {
-    CTimer *timer = *prtimer1;
-
+  for (auto &timer : rtimers_) {
     timers_.remove(timer);
   }
 
