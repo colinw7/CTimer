@@ -1,14 +1,13 @@
-#include "std_c++.h"
-#include "CTimer/CTimer.h"
+#include <CTimer.h>
 
 class Timer : public CTimer {
- private:
-  int secs_;
-
  public:
   Timer(int secs);
 
   void timeOut();
+
+ private:
+  int secs_ { 0 };
 };
 
 static time_t start_time;

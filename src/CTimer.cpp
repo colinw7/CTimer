@@ -152,7 +152,7 @@ getTimer(ulong *msecs)
 
   if (error == -1) return;
 
-  *msecs = 1000*itimer_.it_value.tv_sec + itimer_.it_value.tv_usec/1000;
+  *msecs = 1000*ulong(itimer_.it_value.tv_sec) + ulong(itimer_.it_value.tv_usec/1000);
 }
 
 void
